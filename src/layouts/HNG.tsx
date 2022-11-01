@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
@@ -7,7 +6,6 @@ import { Footer } from '@/components/Footer';
 import Links from '@/components/Links';
 import Profile from '@/components/Profile';
 
-import Share from '../components/Share';
 import useCopyToClipboard from '../components/useCopyToClipboard';
 import Logo from '../public/static/images/I4G.jpg';
 
@@ -75,46 +73,12 @@ export const HNG = () => {
         <div className="flex flex-col gap-8 px-4 md:px-[10%] h-full  justify-between">
           <Profile />
           <div className="h-full flex flex-col gap-6 justify-between">
-            <a
-              href="https://twitter.com/zykson"
-              target="_blank"
-              className={` rounded-lg flex   justify-center py-4 px-8 gap-2 ${
-                anim ? 'focus:bg-[#FCFCFD]' : 'focus:bg-[#98A2B3] '
-              } bg-[#EAECF0]  hover:bg-[#D0D5DD]  `}
-              rel="noreferrer"
-            >
-              {' '}
-              {
-                <div className="flex items-center gap-3 justify-center">
-                  <motion.div
-                    drag="x"
-                    dragSnapToOrigin={true}
-                    dragElastic={0.2}
-                    dragConstraints={{ left: -52, right: 0 }}
-                    onDragEnd={handleAnim}
-                    className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
-                  >
-                    <span className={`text-[#101828]  mx-auto `}>
-                      <span className="text2 font-bold"> Zykson</span>
-                    </span>
-                  </motion.div>
-                  <motion.div
-                    animate={anim ? 'open' : 'closed'}
-                    variants={variants}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    className=""
-                  >
-                    <Share
-                      onClick={() => {
-                        copy('https://twitter.com/zykson');
-                        setTimeout(handleAnim, 7000);
-                      }}
-                    />
-                  </motion.div>
-                </div>
-              }
-            </a>
+            <Links
+              id="twitter"
+              link="https://twitter.com/zykson"
+              name="Zykson"
+            />
+
             {details.map((detail) => {
               return (
                 <Links
