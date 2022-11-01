@@ -48,9 +48,7 @@ const Links = (props: Props) => {
               onDragEnd={handleAnim}
               className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
             >
-              <span
-                className={`text-[#101828]  mx-auto `}
-              >
+              <span className={`text-[#101828]  mx-auto `}>
                 <span className="text2 font-bold"> {props.name}</span>
               </span>
             </motion.div>
