@@ -51,7 +51,9 @@ const Links = (props: Props) => {
               >
                 <span className="text2 font-bold"> {props.name}</span>
               </a>
-              <h3 className="text3 italic hidden flex mr-3">{props.subtext}</h3>
+              <h3 className="text3 screen-reader-text italic flex mr-3">
+                {props.subtext}
+              </h3>
             </motion.div>
             <motion.div
               animate={anim ? 'open' : 'closed'}
