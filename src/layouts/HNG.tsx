@@ -46,7 +46,7 @@ export const HNG = () => {
   // eslint-disable-next-line prettier/prettier, unused-imports/no-unused-vars
   const [ value, copy] = useCopyToClipboard();
   return (
-    <div className="">
+    <div>
       <ToastContainer
         position="top-right"
         autoClose={5000}
