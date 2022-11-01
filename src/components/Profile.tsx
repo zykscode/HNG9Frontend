@@ -1,5 +1,4 @@
-import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import useCopyToClipboard from './useCopyToClipboard';
@@ -20,13 +19,16 @@ const notify = () => {
 const Profile = () => {
   const [active, setActive] = useState(false);
   const [display, setDisplay] = useState(false);
+  const [url, setUrl] = useState('');
   const handleClick = () => {
     return setActive(() => !active);
   };
   const handleDisplay = () => {
     return setDisplay(() => !display);
   };
-  const router = useRouter();
+  useEffect(() => {
+    setUrl(() => window.location.href);
+  });
   // eslint-disable-next-line prettier/prettier, unused-imports/no-unused-vars
   const [value, copy] = useCopyToClipboard();
 
@@ -75,7 +77,7 @@ const Profile = () => {
               <svg
                 onClick={() => {
                   // eslint-disable-next-line no-sequences
-                  copy(router.asPath);
+                  copy(url);
                   notify();
                   setTimeout(handleDisplay, 7000);
                 }}
@@ -100,7 +102,7 @@ const Profile = () => {
           <svg
             onClick={() => {
               // eslint-disable-next-line no-sequences
-              copy(router.asPath);
+              copy(url);
               notify();
             }}
             width="18"
