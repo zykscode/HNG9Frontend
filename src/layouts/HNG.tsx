@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { ToastContainer } from 'react-toastify';
 
 import { Footer } from '@/components/Footer';
@@ -8,11 +8,6 @@ import Profile from '@/components/Profile';
 
 import useCopyToClipboard from '../components/useCopyToClipboard';
 import Logo from '../public/static/images/I4G.jpg';
-
-const variants = {
-  open: { opacity: 1, scale: 1.5 },
-  closed: { opacity: 0 },
-};
 
 export const details = [
   {
@@ -48,11 +43,6 @@ export const details = [
 ];
 
 export const HNG = () => {
-  const [anim, setAnim] = useState(false);
-
-  const handleAnim = () => {
-    setAnim(() => !anim);
-  };
   // eslint-disable-next-line prettier/prettier, unused-imports/no-unused-vars
   const [ value, copy] = useCopyToClipboard();
   return (
