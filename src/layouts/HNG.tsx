@@ -75,10 +75,13 @@ export const HNG = () => {
         <div className="flex flex-col gap-8 px-4 md:px-[10%] h-full  justify-between">
           <Profile />
           <div className="h-full flex flex-col gap-6 justify-between">
-            <button
+            <a
+              href="https://twitter.com/zykson"
+              target="_blank"
               className={` rounded-lg flex   justify-center py-4 px-8 gap-2 ${
                 anim ? 'focus:bg-[#FCFCFD]' : 'focus:bg-[#98A2B3] '
               } bg-[#EAECF0]  hover:bg-[#D0D5DD]  `}
+              rel="noreferrer"
             >
               {' '}
               {
@@ -91,14 +94,12 @@ export const HNG = () => {
                     onDragEnd={handleAnim}
                     className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
                   >
-                    <a
-                      href="https://twitter.com/zykson"
-                      target="_blank"
+                    <span
                       className={`text-[#101828]  mx-auto `}
                       rel="noreferrer"
                     >
                       <span className="text2 font-bold"> Zykson</span>
-                    </a>
+                    </span>
                   </motion.div>
                   <motion.div
                     animate={anim ? 'open' : 'closed'}
@@ -116,7 +117,7 @@ export const HNG = () => {
                   </motion.div>
                 </div>
               }
-            </button>
+            </a>
             {details.map((detail) => {
               return (
                 <Links

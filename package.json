@@ -28,7 +28,8 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-swipeable-list": "^1.6.0",
-    "react-toastify": "^9.0.8"
+    "react-toastify": "^9.0.8",
+    "react-tooltip": "^4.4.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
