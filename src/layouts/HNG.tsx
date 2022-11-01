@@ -94,10 +94,7 @@ export const HNG = () => {
                     onDragEnd={handleAnim}
                     className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
                   >
-                    <span
-                      className={`text-[#101828]  mx-auto `}
-                      rel="noreferrer"
-                    >
+                    <span className={`text-[#101828]  mx-auto `}>
                       <span className="text2 font-bold"> Zykson</span>
                     </span>
                   </motion.div>
