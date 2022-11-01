@@ -49,9 +49,7 @@ const Links = (props: Props) => {
               className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
             >
               <span
-                role="link"
                 className={`text-[#101828]  mx-auto `}
-                rel="noreferrer"
               >
                 <span className="text2 font-bold"> {props.name}</span>
               </span>
