@@ -24,7 +24,7 @@ export const details = [
   },
   {
     id: 'books',
-    link: 'http://book.zuri.team',
+    link: 'http://books.zuri.team/',
     name: 'Zuri Books',
     subtext: 'This is where you find books about design and coding',
   },
