@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import Share from './Share';
 import useCopyToClipboard from './useCopyToClipboard';
@@ -26,11 +27,15 @@ const Links = (props: Props) => {
   const [ value, copy] = useCopyToClipboard();
   return (
     <>
-      <button
+      <a
         id={props.id}
+        href={props.link}
+        target="_blank"
+        data-tip={props.subtext}
         className={` rounded-lg flex   justify-center py-4 px-8 gap-2 ${
           anim ? 'focus:bg-[#FCFCFD]' : 'focus:bg-[#98A2B3] '
         } bg-[#EAECF0]  hover:bg-[#D0D5DD]  `}
+        rel="noreferrer"
       >
         {' '}
         {
@@ -43,18 +48,13 @@ const Links = (props: Props) => {
               onDragEnd={handleAnim}
               className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
             >
-              <a
+              <span
                 role="link"
-                href={props.link}
-                target="_blank"
                 className={`text-[#101828]  mx-auto `}
                 rel="noreferrer"
               >
                 <span className="text2 font-bold"> {props.name}</span>
-              </a>
-              <h3 className="text3 screen-reader-text italic flex mr-3">
-                {props.subtext}
-              </h3>
+              </span>
             </motion.div>
             <motion.div
               animate={anim ? 'open' : 'closed'}
@@ -72,7 +72,13 @@ const Links = (props: Props) => {
             </motion.div>
           </div>
         }
-      </button>
+      </a>
+      <ReactTooltip
+        place="bottom"
+        multiline={true}
+        clickable={true}
+        effect="solid"
+      />
     </>
   );
 };
