@@ -30,6 +30,7 @@ const Links = (props: Props) => {
       <a
         id={props.id}
         href={props.link}
+        title={props.subtext}
         target="_blank"
         data-tip={props.subtext}
         className={` rounded-lg flex   justify-center py-4 px-8 gap-2 ${
