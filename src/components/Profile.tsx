@@ -123,11 +123,11 @@ const Profile = () => {
       </div>
 
       <div className="h-[15.625vh] flex flex-col gap-6 justify-between items-center">
-        <div className=" focus:border-[#EBE9FE] focus:border-[5.5px] rounded-full  hover:bg-[#344054BF] bg-[url('../public/static/images/me.jpg')] bg-cover">
-          <div
-            id="profile__img"
-            className="h-[88px] opacity-0 hover:opacity-100  w-[88px] rounded-full hover:bg-[#344054BF] "
-          >
+        <div
+          id="profile__img"
+          className=" focus:border-[#EBE9FE] focus:border-[5.5px] rounded-full  hover:bg-[#344054BF] bg-[url('../public/static/images/me.jpg')] bg-cover"
+        >
+          <div className="h-[88px] opacity-0 hover:opacity-100  w-[88px] rounded-full hover:bg-[#344054BF] ">
             <div className="px-[34px] pt-[58px]">
               <svg
                 width="22"
@@ -154,11 +154,13 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        <div
-          id="twitter"
-          className="w-full h-[20%]  text-[#101828] flex justify-center"
-        >
-          <h3 className="text1">Tenu Isaac</h3>
+        <div className="w-full h-[20%]  text-[#101828] flex justify-center">
+          <h3 id="twitter" className="text1">
+            Tenu Isaac
+          </h3>
+          <h3 id="slack" className="text1 screen-reader-text">
+            zykson
+          </h3>
         </div>
       </div>
     </div>
