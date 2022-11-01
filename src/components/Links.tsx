@@ -44,6 +44,7 @@ const Links = (props: Props) => {
               className={`flex flex-col md:p-2   gap-1 ${anim ? '' : ''}`}
             >
               <a
+                role="link"
                 href={props.link}
                 target="_blank"
                 className={`text-[#101828]  mx-auto `}
@@ -58,7 +59,7 @@ const Links = (props: Props) => {
             <motion.div
               animate={anim ? 'open' : 'closed'}
               variants={variants}
-              initial={{ opacity: 0, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0.6 }}
               transition={{ duration: 0.5 }}
               className=""
             >
